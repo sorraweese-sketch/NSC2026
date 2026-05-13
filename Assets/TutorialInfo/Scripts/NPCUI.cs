@@ -1,6 +1,8 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
+using UnityEngine.AI;
 
 public class NPCUI : MonoBehaviour
 {
@@ -14,38 +16,72 @@ public class NPCUI : MonoBehaviour
 
     public RawImage npcImage;
 
+    // ระยะที่กด E ได้
+    public float interactDistance = 10f;
+
     private NPCData data;
+
+    private NavMeshAgent agent;
+
+    private bool isOpen = false;
 
     void Start()
     {
         data = GetComponent<NPCData>();
+
+        agent = GetComponent<NavMeshAgent>();
+
+        // เริ่มเกมให้ UI ปิด
+        panel.SetActive(false);
     }
 
-    void OnMouseOver()
-    {   
-        Debug.Log("Mouse On NPC");
+    void Update()
+    {
+        // ระยะจากกล้องถึง NPC
+        float distance =
+            Vector3.Distance(
+                Camera.main.transform.position,
+                transform.position
+            );
 
-        if (Input.GetMouseButtonDown(1))
+        // ถ้าอยู่ใกล้พอ
+        if (distance <= interactDistance)
         {
-            panel.SetActive(true);
+            // กด E
+            if (Keyboard.current.eKey.wasPressedThisFrame)
+            {
+                // เปิด / ปิด UI
+                isOpen = !isOpen;
 
-            healthText.text =
-                "Health : " + data.health;
+                panel.SetActive(isOpen);
 
-            hungerText.text =
-                "Hunger : " + data.hunger;
+                // หยุดเดินเมื่อเปิด UI
+                agent.isStopped = isOpen;
 
-            thirstText.text =
-                "Thirst : " + data.thirst;
+                // ถ้า UI เปิด
+                if (isOpen)
+                {
+                    // อัปเดตข้อความ
+                    healthText.text =
+                        "Health : " + data.health;
 
-            ageText.text =
-                "Age : " + data.age;
+                    hungerText.text =
+                        "Hunger : " + data.hunger;
 
-            relationText.text =
-                "Relation : " + data.relationship;
+                    thirstText.text =
+                        "Thirst : " + data.thirst;
 
-            npcImage.texture =
-                data.profilePicture;
+                    ageText.text =
+                        "Age : " + data.age;
+
+                    relationText.text =
+                        "Relation : " + data.relationship;
+
+                    // อัปเดตรูป
+                    npcImage.texture =
+                        data.profilePicture;
+                }
+            }
         }
     }
 }
