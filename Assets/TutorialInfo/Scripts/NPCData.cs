@@ -25,6 +25,11 @@ public class NPCData : MonoBehaviour
     // เลือดลดตอนใกล้ตาย
     public float healthDecrease = 5f;
 
+    [Header("Needs")]
+
+    // จุดน้ำ
+    public Transform waterPoint;
+
     [Header("Profile")]
 
     public Texture profilePicture;

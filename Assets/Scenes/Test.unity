@@ -208,6 +208,7 @@ GameObject:
   - component: {fileID: 247259317}
   - component: {fileID: 247259325}
   - component: {fileID: 247259324}
+  - component: {fileID: 247259326}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -227,7 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 733a8e07e4fbeeb4c834e7945b8a480e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RandomWalk
-  walkRadius: 5
+  walkRadius: 10
 --- !u!195 &247259318
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -407,13 +408,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCData
   health: 100
   hunger: 80
-  thirst: 60
+  thirst: 100
   age: 20
   relationship: 50
-  hungerDecrease: 8
-  thirstDecrease: 2
-  healthDecrease: 5
+  hungerDecrease: 0
+  thirstDecrease: 1
+  healthDecrease: 0
+  waterPoint: {fileID: 1083390111}
   profilePicture: {fileID: 0}
+--- !u!114 &247259326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247259316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43c141e23f6bb7144a85531121989fe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCNeeds
 --- !u!1 &479066544
 GameObject:
   m_ObjectHideFlags: 0
@@ -991,8 +1005,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 771728662}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 384, y: 9.6, z: 381.69}
+  m_LocalRotation: {x: 0.28193054, y: -0.024174536, z: 0.007106154, w: 0.9591039}
+  m_LocalPosition: {x: 386.08923, y: 18.36693, z: 367.356}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1193,6 +1207,37 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &1083390110
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1083390111}
+  m_Layer: 0
+  m_Name: WaterPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1083390111
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083390110}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.299, y: 0, z: 0.921}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1354929191}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1098773092
 GameObject:
   m_ObjectHideFlags: 0
@@ -1426,13 +1471,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1237166451}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 413.77, y: -0, z: 390.6608}
+  m_LocalRotation: {x: -0.0009423013, y: 0.0058682226, z: -0.010583428, w: 0.9999263}
+  m_LocalPosition: {x: 437.95, y: -0.51, z: 390.38}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.101, y: 0.674, z: -1.213}
 --- !u!1 &1287738126
 GameObject:
   m_ObjectHideFlags: 0
@@ -1541,7 +1586,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 386.58432, y: -0, z: 389.96}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1354929191}
@@ -1574,9 +1619,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.14, y: 0.22, z: 0.86}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1083390111}
   m_Father: {fileID: 1287738130}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1354929192
