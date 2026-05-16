@@ -119,6 +119,78 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &9661823 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 523134751291821782, guid: 38b14dbadf2a482498237183740af160, type: 3}
+  m_PrefabInstance: {fileID: 3554720917149403232}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &9661824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9661823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 9661825}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1183559870}
+        m_TargetAssemblyTypeName: GameUIController, Assembly-CSharp
+        m_MethodName: ToggleBook
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &9661825 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3842834370058015540, guid: 38b14dbadf2a482498237183740af160, type: 3}
+  m_PrefabInstance: {fileID: 3554720917149403232}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9661823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1 &551933649
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,6 +275,55 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3431516116870461537, guid: 38b14dbadf2a482498237183740af160, type: 3}
   m_PrefabInstance: {fileID: 3554720917149403232}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &681924302 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5849618265955168731, guid: 38b14dbadf2a482498237183740af160, type: 3}
+  m_PrefabInstance: {fileID: 3554720917149403232}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &854765891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 854765893}
+  - component: {fileID: 854765892}
+  m_Layer: 0
+  m_Name: Gamemanager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &854765892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854765891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 959b7479552637f43a33be33036bbc5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneManagerScript
+--- !u!4 &854765893
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854765891}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 357.2612, y: 118.65231, z: -82.08136}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1183559865
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,6 +336,7 @@ GameObject:
   - component: {fileID: 1183559868}
   - component: {fileID: 1183559867}
   - component: {fileID: 1183559866}
+  - component: {fileID: 1183559870}
   m_Layer: 5
   m_Name: HUD_Canvas
   m_TagString: Untagged
@@ -305,6 +427,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1183559870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183559865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b049f776fb8fc0a4ebe374deab6f5f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameUIController
+  shopWindow: {fileID: 681924302}
+  bookWindow: {fileID: 9661823}
 --- !u!1 &1699722883
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,6 +672,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Currency_Group
       objectReference: {fileID: 0}
+    - target: {fileID: 2227638175385541024, guid: 38b14dbadf2a482498237183740af160, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2227638175385541024, guid: 38b14dbadf2a482498237183740af160, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2227638175385541024, guid: 38b14dbadf2a482498237183740af160, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1183559870}
+    - target: {fileID: 2227638175385541024, guid: 38b14dbadf2a482498237183740af160, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2227638175385541024, guid: 38b14dbadf2a482498237183740af160, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToggleShop
+      objectReference: {fileID: 0}
+    - target: {fileID: 2227638175385541024, guid: 38b14dbadf2a482498237183740af160, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameUIController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2227638175385541024, guid: 38b14dbadf2a482498237183740af160, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3431516116870461537, guid: 38b14dbadf2a482498237183740af160, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -619,7 +783,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 523134751291821782, guid: 38b14dbadf2a482498237183740af160, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9661824}
   m_SourcePrefab: {fileID: 100100000, guid: 38b14dbadf2a482498237183740af160, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -629,3 +796,4 @@ SceneRoots:
   - {fileID: 1834388073}
   - {fileID: 1183559869}
   - {fileID: 551933652}
+  - {fileID: 854765893}
