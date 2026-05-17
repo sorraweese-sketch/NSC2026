@@ -6834,8 +6834,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33f304f2d7907554d9ed5902fac5fa3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraController
-  lookSpeed: 2
-  moveSpeed: 10
+  lookSpeed: 0.5
+  moveSpeed: 20
 --- !u!1001 &335791894
 PrefabInstance:
   m_ObjectHideFlags: 0
