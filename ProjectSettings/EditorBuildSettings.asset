@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Uimainmenu.unity
     guid: 77715365a22826f41a7f76b95def111b
   - enabled: 1
-    path: Assets/Game.unity
-    guid: 7da0b843706e0764995da8f9d3dd20a9
-  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
